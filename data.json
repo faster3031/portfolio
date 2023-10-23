@@ -1,0 +1,85 @@
+{
+    "portfolioItems": [
+      {
+        "h": "PERSONAL PROJECT",
+        "title": "STX 건설",
+        "date": "2023. 11. 08 ~ 2023. 11. 21",
+        "contributors": "1명(기여도: 100%)",
+        "technologies": "HTML, CSS, JavaScript",
+        "src": "images/stx.gif",
+        "link": {
+          "workLabel": "work",
+          "githubLabel": "github",
+          "originLabel": "origin",
+          "work": "https://",
+          "github": "https://",
+          "origin": "http://"
+        }
+      },
+      {
+        "h": "PERSONAL PROJECT",
+        "title": "도시락통",
+        "date": "2023. 11. 08 ~ 2023. 11. 21",
+        "contributors": "1명(기여도: 100%)",
+        "technologies": "HTML, CSS, JavaScript",
+        "src": "images/dosiraktong.gif",
+        "link": {
+          "workLabel": "work",
+          "githubLabel": "github",
+          "originLabel": "origin",
+          "work": "https://",
+          "github": "https://",
+          "origin": "http://"
+        }
+      },
+      {
+        "h": "PERSONAL PROJECT",
+        "title": "한살림 장보기",
+        "date": "2023. 11. 08 ~ 2023. 11. 21",
+        "contributors": "1명(기여도: 100%)",
+        "technologies": "HTML, CSS, JavaScript",
+        "src": "images/hansalim.gif",
+        "link": {
+          "workLabel": "work",
+          "githubLabel": "github",
+          "originLabel": "origin",
+          "work": "https://",
+          "github": "https://",
+          "origin": "http://"
+        }
+      },
+      {
+        "h": "TEAM PROJECT",
+        "title": "별의 온도",
+        "date": "2023. 11. 08 ~ 2023. 11. 21",
+        "contributors": "3명(기여도: 80%)",
+        "technologies": "HTML, CSS, JavaScript",
+        "src": "images/starondo.PNG",
+        "link": {
+          "workLabel": "Notion",
+          "githubLabel": "GitHub",
+          "originLabel": "Figma",
+          "Notion": "https://",
+          "GitHub": "https://",
+          "Figma": "http://"
+        }
+      },
+      {
+        "h": "TEAM PROJECT",
+        "title": "인스탁스",
+        "date": "2023. 11. 08 ~ 2023. 11. 21",
+        "contributors": "3명(기여도: 80%)",
+        "technologies": "HTML, CSS, JavaScript",
+        "src": "images/인스탁스.PNG",
+        "link": {
+          "workLabel": "Notion",
+          "githubLabel": "GitHub",
+          "originLabel": "Figma",
+          "Notion": "https://",
+          "GitHub": "https://",
+          "Figma": "http://"
+        }
+      }
+      
+    ]
+  }

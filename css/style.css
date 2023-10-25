@@ -1252,7 +1252,36 @@ body {
     text-align: center;
   }
 }
-
+@media screen and (max-width: 480px)  {
+  .pf-item{
+    width: 100%;
+  }
+  #pf-item2{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .pf-txt{
+    padding: 10px;
+  }
+  .pf-txt h1{
+    width: 180px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .pf-txt p{
+    font-size: 1.2rem;
+    line-height: 20px;
+  }
+  .pf-txt h2{
+    padding-bottom: 10px;
+  }
+  .pf-btn{
+    gap: 5px;
+  }
+  .pf-btn a{
+    padding: 10px;
+  }
+}
 @media all and (min-width: 1025px) and (max-width: 1219px) {
   .swVisual-wrap-1 {
     position: relative;

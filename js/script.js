@@ -86,6 +86,74 @@ window.onload = function () {
       behavior: "smooth",
     });
   });
+  window.addEventListener("scroll", function () {
+    scy = this.document.documentElement.scrollTop;
+    if (scy > 0) {
+      header.classList.add("active");
+      mbt.classList.add("active");
+    } else {
+      const state = navMb.classList.contains("active");
+      if (state) {
+        // 만약에 모바일 메뉴가 펼쳐진 상태라면
+        header.classList.add("active");
+        mbt.classList.add("active");
+      } else {
+        // 그렇지 않다면 원래대로 처리하고..
+        header.classList.remove("active");
+        mbt.classList.remove("active");
+      }
+    }
+  });
+  // 모바일 메뉴 클릭 처리
+  const mbt = document.querySelector(".mbt");
+  const htmlRoot = document.querySelector("html");
+  const navMb = document.querySelector(".nav-mb");
+  mbt.addEventListener("click", function () {
+    // 현재 ani클래스가 있는지 없는지 파악
+    const state = this.classList.contains("ani");
+    if (state) {
+      this.classList.remove("ani");
+      // 윈도우에 스크롤바가 나타납니다.
+      htmlRoot.classList.remove("active");
+      // 모바일 메뉴 숨기기
+      navMb.classList.remove("active");
+      if (scy > 0) {
+        header.classList.add("active");
+        mbt.classList.add("active");
+      } else {
+        header.classList.remove("active");
+        mbt.classList.remove("active");
+      }
+    } else {
+      this.classList.add("ani");
+      htmlRoot.classList.add("active");
+      navMb.classList.add("active");
+      header.classList.add("active");
+      mbt.classList.add("active");
+    }
+  });
+  // 반응형 처리
+  let winW = window.innerWidth;
+  window.addEventListener("resize", function () {
+    // 웹브라우저 안쪽 너비
+    winW = window.innerWidth;
+    // mobile ===> pc 전환
+    if (winW > 1024) {
+      mbt.classList.remove("ani");
+      htmlRoot.classList.remove("active");
+      navMb.classList.remove("active");
+
+      if (scy > 0) {
+        // 스크롤이 된 상태에서 화면 리사이징..
+        header.classList.add("active");
+        mbt.classList.add("active");
+      } else {
+        // 스크롤 안됨. 화면 리사이징..
+        header.classList.remove("active");
+        mbt.classList.remove("active");
+      }
+    }
+  });
   // gotop
   let waypoint_footer = new Waypoint({
     element: document.querySelector(".footer"),
@@ -173,5 +241,25 @@ window.onload = function () {
             event.preventDefault(); // 기본 동작을 막음
             var target = this.parentElement.getAttribute('data-link'); // data-link 속성 값 가져옴
         });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.querySelectorAll('[data-link]');
+    
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+    
+          // data-link 속성 값을 가져옵니다.
+          var targetClass = this.getAttribute('data-link');
+    
+          // 클래스 이름으로 해당 섹션들을 선택합니다.
+          var targetSections = document.querySelectorAll('.' + targetClass);
+          
+          // 선택한 모든 섹션에 대해 스크롤링합니다.
+          targetSections.forEach(function(section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      });
     });
 };

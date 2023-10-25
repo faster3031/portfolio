@@ -161,6 +161,83 @@ body {
 .h-contact a:hover {
   color: #009ce6;
 }
+/* 모바일 메뉴 */
+.mbt {
+  position: absolute;
+  display: none;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.mbt span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  transition: background 0.3s;
+}
+.mbt.active span {
+  background-color: #222 !important;
+}
+.mbt span:nth-child(1) {
+  top: 0;
+  transform-origin: 0 50%;
+  transition: transform 0.3s;
+}
+.mbt.ani span:nth-child(1) {
+  transform: rotate(45deg) !important;
+}
+.mbt span:nth-child(2) {
+  top: 50%;
+  transform-origin: 0 50%;
+  transition: transform 0.3s;
+}
+.mbt.ani span:nth-child(2) {
+  opacity: 0 !important;
+}
+.mbt span:nth-child(3) {
+  top: 100%;
+  transform-origin: 0 50%;
+  transition: transform 0.3s;
+}
+.mbt.ani span:nth-child(3) {
+  transform: rotate(-45deg) !important;
+}
+/* 모바일 gnb */
+.nav-mb {
+  position: absolute;
+  top: 70px;
+  left: 100%;
+  display: block;
+  width: 50%;
+  height: calc(100vh - 70px);
+  background-color: #fffffffa;
+  opacity: 0;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.nav-mb.active {
+  left: 60% !important;
+  opacity: 1 !important;
+}
+.nav-mb-gnb li {
+  line-height: 67px;
+}
+.nav-mb-gnb li a {
+  display: block;
+  padding: 0 40px;
+  font-size: 20px;
+  color: #222;
+  border-bottom: 1px solid #e5e5e5;
+}
 @media screen and (max-width: 1024px) {
   .header {
     height: 80px;
@@ -172,6 +249,12 @@ body {
   .zulogo {
     width: 80px;
     height: 80px;
+  }
+  .mbt {
+    display: block;
+  }
+  .header-right{
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
